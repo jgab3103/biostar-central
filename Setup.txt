@@ -1,0 +1,7 @@
+apt update
+apt install pip
+pip install -r conf/requirements.txt
+pip install celery
+python manage.py migrate --settings biostar.forum.settings
+python manage.py collectstatic --noinput -v 0 --settings biostar.forum.settings
+
